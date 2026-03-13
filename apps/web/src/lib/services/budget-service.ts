@@ -19,30 +19,29 @@ export class BudgetService {
     const id = generateId();
     const now = new Date();
 
-    this.db
-      .insert(budget)
-      .values({
-        id,
-        name: input.name,
-        currency: input.currency ?? "USD",
-        createdBy: userId,
-        createdAt: now,
-        updatedAt: now,
-      })
-      .run();
+    this.db.transaction((tx) => {
+      tx.insert(budget)
+        .values({
+          id,
+          name: input.name,
+          currency: input.currency ?? "USD",
+          createdBy: userId,
+          createdAt: now,
+          updatedAt: now,
+        })
+        .run();
 
-    // Add creator as owner
-    this.db
-      .insert(budgetMember)
-      .values({
-        id: generateId(),
-        budgetId: id,
-        userId,
-        role: "owner",
-        createdAt: now,
-        updatedAt: now,
-      })
-      .run();
+      tx.insert(budgetMember)
+        .values({
+          id: generateId(),
+          budgetId: id,
+          userId,
+          role: "owner",
+          createdAt: now,
+          updatedAt: now,
+        })
+        .run();
+    });
 
     return this.getById(id)!;
   }
