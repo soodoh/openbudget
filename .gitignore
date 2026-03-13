@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.output/
+dist/
+.next/
+out/
+
+# Turbo
+.turbo/
+
+# TanStack
+.tanstack/
+**/routeTree.gen.ts
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# User data
+apps/web/data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+
+# Playwright
+apps/web/e2e/.auth/
+apps/web/test-results/
+apps/web/playwright-report/
+
+# Worktrees
+.worktrees/
+
+# Superpowers brainstorm sessions
+.superpowers/
+
+# Claude/Serena
+.serena/
+.claude/sessions/

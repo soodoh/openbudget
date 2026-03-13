@@ -1,0 +1,9 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'docs placeholder'",
+    "build": "echo 'docs placeholder'"
+  }
+}
