@@ -96,7 +96,12 @@ export function MoveMoneyDialog({
             <Label>From</Label>
             <Select value={fromId} onValueChange={setFromId}>
               <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select source category" />
+                <SelectValue placeholder="Select source category">
+                  {fromId
+                    ? (sourceCategories.find((c) => c.id === fromId)?.name ??
+                      "Select source category")
+                    : "Select source category"}
+                </SelectValue>
               </SelectTrigger>
               <SelectContent>
                 {sourceCategories.map((cat) => (
@@ -111,7 +116,12 @@ export function MoveMoneyDialog({
             <Label>To</Label>
             <Select value={toId} onValueChange={setToId}>
               <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select target category" />
+                <SelectValue placeholder="Select target category">
+                  {toId
+                    ? (allCategories.find((c) => c.id === toId)?.name ??
+                      "Select target category")
+                    : "Select target category"}
+                </SelectValue>
               </SelectTrigger>
               <SelectContent>
                 {allCategories.map((cat) => (

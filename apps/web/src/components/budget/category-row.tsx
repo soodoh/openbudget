@@ -51,7 +51,7 @@ export function CategoryRow({
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
-    gridTemplateColumns: "1fr 120px 120px 120px",
+    gridTemplateColumns: "1fr 90px 90px 90px",
   };
 
   useEffect(() => {

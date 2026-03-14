@@ -132,7 +132,7 @@ export function CategoryGroupRow({
     >
       <div
         className="grid items-center gap-2 rounded-t-md bg-muted/50 px-2 py-2"
-        style={{ gridTemplateColumns: "1fr 120px 120px 120px" }}
+        style={{ gridTemplateColumns: "1fr 90px 90px 90px" }}
       >
         <div className="flex min-w-0 items-center gap-1">
           <button
