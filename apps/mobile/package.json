@@ -1,9 +1,9 @@
 {
-  "name": "mobile",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "echo 'mobile placeholder'",
-    "build": "echo 'mobile placeholder'"
-  }
+	"name": "mobile",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "echo 'mobile placeholder'",
+		"build": "echo 'mobile placeholder'"
+	}
 }
