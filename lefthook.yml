@@ -1,9 +1,7 @@
 pre-commit:
-  parallel: true
-  jobs:
-    - name: biome
-      run: bunx biome check --fix {staged_files}
-      glob: "*.{js,jsx,ts,tsx,css,html,json,md,mdx,yaml,yml}"
+  commands:
+    check:
+      run: bunx biome check --write --staged --no-errors-on-unmatched
       stage_fixed: true
 
 commit-msg:
