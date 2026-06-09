@@ -18,11 +18,11 @@
 		"prepare": "lefthook install"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.10",
-		"@commitlint/cli": "^20.5.0",
-		"@commitlint/config-conventional": "^20.5.0",
+		"@biomejs/biome": "^2.4.16",
+		"@commitlint/cli": "^20.5.3",
+		"@commitlint/config-conventional": "^20.5.3",
 		"@commitlint/types": "^20.5.0",
-		"lefthook": "^2.1.4",
-		"turbo": "^2.9.3"
+		"lefthook": "^2.1.9",
+		"turbo": "^2.9.16"
 	}
 }
