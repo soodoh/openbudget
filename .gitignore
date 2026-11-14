@@ -45,6 +45,7 @@ yarn-error.log*
 
 # Testing
 coverage/
+.vitest/
 
 # Playwright
 apps/web/e2e/.auth/
