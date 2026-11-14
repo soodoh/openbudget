@@ -94,7 +94,10 @@ export function MoveMoneyDialog({
 				<div className="space-y-4">
 					<div className="space-y-1.5">
 						<Label>From</Label>
-						<Select value={fromId} onValueChange={setFromId}>
+						<Select
+							value={fromId}
+							onValueChange={(value) => setFromId(value ?? "")}
+						>
 							<SelectTrigger className="w-full">
 								<SelectValue placeholder="Select source category">
 									{fromId
@@ -114,7 +117,10 @@ export function MoveMoneyDialog({
 					</div>
 					<div className="space-y-1.5">
 						<Label>To</Label>
-						<Select value={toId} onValueChange={setToId}>
+						<Select
+							value={toId}
+							onValueChange={(value) => setToId(value ?? "")}
+						>
 							<SelectTrigger className="w-full">
 								<SelectValue placeholder="Select target category">
 									{toId

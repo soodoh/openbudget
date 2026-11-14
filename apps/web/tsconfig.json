@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"target": "ES2017",
+		"target": "ES2022",
+		"types": ["bun", "vite/client"],
 		"module": "ESNext",
 		"moduleResolution": "Bundler",
 		"jsx": "react-jsx",

@@ -15,7 +15,7 @@
 		"lint:fix": "turbo lint:fix",
 		"test": "turbo test",
 		"test:run": "turbo test:run",
-		"prepare": "lefthook install"
+		"prepare": "test ! -e .git || lefthook install"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.6.7",

@@ -11,6 +11,8 @@
 		"lint:fix": "biome check --fix .",
 		"test": "bun --bun vitest",
 		"test:run": "bun --bun vitest run",
+		"test:smoke": "bun run build && bun run scripts/smoke-production.ts",
+		"typecheck": "bun run build && tsc --noEmit",
 		"test:e2e": "playwright test",
 		"test:e2e:ui": "playwright test --ui"
 	},
@@ -40,8 +42,10 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.65.1",
+		"@testing-library/dom": "^10",
 		"@testing-library/jest-dom": "^7.0.1",
 		"@testing-library/react": "^16.3.3",
+		"@types/bun": "^1.4.4",
 		"@types/react": "^19.3.0",
 		"@types/react-dom": "^19.3.0",
 		"@vitejs/plugin-react": "^6.3.0",
