@@ -31,13 +31,13 @@ import { authClient } from "@/lib/auth-client";
 
 type NavItem = {
 	title: string;
-	url: string;
+	url: "/" | null;
 	icon: React.ComponentType<{ className?: string }>;
 };
 
 const navItems: NavItem[] = [
 	{ title: "Budgets", url: "/", icon: LayoutDashboard },
-	{ title: "Settings", url: "/settings", icon: Settings },
+	{ title: "Settings", url: null, icon: Settings },
 ];
 
 function getInitials(name: string): string {
@@ -103,8 +103,9 @@ export function AppSidebar({ user }: AppSidebarProps): React.ReactElement {
 								<SidebarMenuItem key={item.title}>
 									<SidebarMenuButton
 										tooltip={item.title}
-										isActive={isActive(item.url)}
-										render={<Link to={item.url} />}
+										isActive={item.url !== null && isActive(item.url)}
+										disabled={item.url === null}
+										render={item.url ? <Link to={item.url} /> : undefined}
 									>
 										<item.icon />
 										<span>{item.title}</span>
@@ -150,7 +151,7 @@ export function AppSidebar({ user }: AppSidebarProps): React.ReactElement {
 								sideOffset={4}
 								className="w-[--anchor-width] min-w-56"
 							>
-								<DropdownMenuItem render={<Link to="/settings" />}>
+								<DropdownMenuItem disabled>
 									<Settings />
 									Settings
 								</DropdownMenuItem>
